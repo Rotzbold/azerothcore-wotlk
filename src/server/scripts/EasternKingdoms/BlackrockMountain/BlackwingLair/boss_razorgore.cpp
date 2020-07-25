@@ -92,10 +92,10 @@ public:
                 DoChangePhase();
         }
 
-        void DamageTaken(Unit*, uint32& damage, DamageEffectType, SpellSchoolMask)
+        void DamageTaken(Unit*, uint32& /*damage*/, DamageEffectType, SpellSchoolMask)
         {
-            if (!secondPhase)
-                damage = 0;
+           /* if (!secondPhase)
+                damage = 0;*/
         }
 
         void UpdateAI(uint32 diff)
