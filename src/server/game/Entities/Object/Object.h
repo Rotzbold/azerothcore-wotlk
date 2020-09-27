@@ -503,10 +503,7 @@ struct Position
     }
     float GetExactDistSq(const Position* pos) const
     {
-        float dx = m_positionX - pos->m_positionX;
-        float dy = m_positionY - pos->m_positionY;
-        float dz = m_positionZ - pos->m_positionZ;
-        return dx*dx + dy*dy + dz*dz;
+        float dx = m_positionX - pos->m_positionX; float dy = m_positionY - pos->m_positionY; float dz = m_positionZ - pos->m_positionZ; return dx*dx + dy*dy + dz*dz;
     }
     float GetExactDist(const Position* pos) const
     {
@@ -1036,8 +1033,6 @@ class WorldObject : public Object, public WorldLocation
         virtual float GetStationaryY() const { return GetPositionY(); }
         virtual float GetStationaryZ() const { return GetPositionZ(); }
         virtual float GetStationaryO() const { return GetOrientation(); }
-
-        float GetMapHeight(float x, float y, float z, bool vmap = true, float distanceToSearch = 50.0f) const; // DEFAULT_HEIGHT_SEARCH in map.h
 
     protected:
         std::string m_name;
